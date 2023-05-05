@@ -37,7 +37,7 @@ image-fed38: src = fedora38
 image: requirements.txt docker-source
 	docker build -t "wugtheflunk/proton-python-client:ubuntu-latest" -f "$(DOCKERFILE_BUILD)" .
 	docker push wugtheflunk/proton-python-client:ubuntu-latest
-	docker tag $(NAME_IMAGE):$(TAG_IMAGE) $(NAME_IMAGE):$(TAG_IMAGE)
+	docker tag wugtheflunk/proton-python-client:ubuntu-latest wugtheflunk/proton-python-client:ubuntu-latest
 
 ## We host our own copy of the image ubuntu:latest
 docker-source:
